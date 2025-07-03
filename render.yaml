@@ -1,0 +1,11 @@
+services:
+
+type: web
+name: financial-friend-backend
+runtime: python
+buildCommand: pip install -r requirements.txt
+startCommand: uvicorn app:app --host 0.0.0.0 --port 7860
+envVars:
+
+key: DEEPSEEK_API_KEY
+value:  sk-e01ae4749bda419ebe433b94835fe35e
