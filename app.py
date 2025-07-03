@@ -6,7 +6,6 @@ import re
 from thefuzz import fuzz
 import yfinance as yf
 from bs4 import BeautifulSoup
-import uvicorn
 import os
 from sentence_transformers import SentenceTransformer, util
 
@@ -165,6 +164,3 @@ def chat_with_bot(payload: UserInput):
     else:
         content = f"⚠️ API Error: {response.text}"
     return {"response": content}
-
-if __name__ == "__main__":
-    uvicorn.run("app:app", host="0.0.0.0", port=7860, reload=True)
