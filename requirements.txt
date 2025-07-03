@@ -1,0 +1,11 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+import requests
+import pandas as pd
+import re
+from thefuzz import fuzz
+import yfinance as yf
+from bs4 import BeautifulSoup
+import uvicorn
+import os
+from sentence_transformers import SentenceTransformer, util
